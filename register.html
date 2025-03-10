@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1 class="app-title">GEOMITRA 2025</h1>
+        <div class="register-box">
+            <div class="input-container">
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-container">
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+    <!-- Custom Script -->
+    <script src="register.js"></script>
+</body>
+</html>
