@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Quiz</h1>
+        <input type="password" id="quizPassword" placeholder="Enter Password">
+        <button id="startQuizBtn">Start Quiz</button>
+    </div>
+
+    <script>
+        document.getElementById("startQuizBtn").addEventListener("click", function () {
+            let inputPassword = document.getElementById("quizPassword").value;
+            let correctPassword = "1234"; // Change this password if needed
+
+            if (inputPassword === correctPassword) {
+                localStorage.setItem("quizStarted", "true"); // Store quiz start
+                window.location.href = "quiz.html"; // Redirect to quiz
+            } else {
+                alert("Incorrect password! Try again.");
+            }
+        });
+    </script>
+</body>
+</html>
